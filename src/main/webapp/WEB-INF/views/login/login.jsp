@@ -8,7 +8,7 @@
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/login.css">
 <title>login</title>
 </head>
-<body>4
+<body>
 	
 	<div id="login-wrap">
 		<div class="login-logo">
