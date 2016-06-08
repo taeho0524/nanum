@@ -1,31 +1,56 @@
 /*
 	@FileName : CheckBoard.java
-	@Project
-	@Date :2016. 6. 8.
-	@Author: ÇÑ¼ö¹Î
+	@Project : NANUM
+	@Date : 2016. 6. 8.
+	@Author : í•œìˆ˜ë¯¼
 */
 
 package com.nanum.domain;
 
 /*  	 
-	@Class:CheckBoard
-	@Date: 2016. 6. 8.
-	@Author:ÇÑ¼ö¹Î
-*/ 
+	@Class : CheckBoard
+	@Date : 2016. 6. 8.
+	@Author : í•œìˆ˜ë¯¼
 
+//ê´€ë ¨ëœ í…Œì´ë¸” ìƒì„±ë¬¸
+ CREATE TABLE CHECK_BOARD (
+	checked_no NUMBER NOT NULL,  
+	board_no NUMBER NOT NULL,   
+	check_date DATE NOT NULL  
+);
+*/
 
-public class CheckBoard 
-{
-	int checked_no;
-	int board_no;
-	String check_date;
+public class CheckBoard{
 	
-	/* °Ô½Ã±Û Æò°¡ ³»¿ª 
-	CREATE TABLE CHECK_BOARD
-	(
-	checked_no NUMBER NOT NULL, / Æò°¡ ¹øÈ£ /
-	board_no NUMBER NOT NULL, / °Ô½Ã±Û ¹øÈ£ /
-	check_date DATE NOT NULL / Æò°¡ ³¯Â¥ /
-	);
-	 */
+	private int checked_no; //í‰ê°€ ë²ˆí˜¸ 
+	private int board_no; //ê²Œì‹œê¸€ ë²ˆí˜¸
+	private String check_date; //í‰ê°€ ë‚ ì§œ 
+	
+	/*
+	Update
+	
+	@Date : 2016. 6. 8.
+	@Author : ì‹ ì§„ìš°
+	@Contents : DTO getter,setter ì¶”ê°€
+	
+	*/
+	
+	public int getChecked_no() {
+		return checked_no;
+	}
+	public void setChecked_no(int checked_no) {
+		this.checked_no = checked_no;
+	}
+	public int getBoard_no() {
+		return board_no;
+	}
+	public void setBoard_no(int board_no) {
+		this.board_no = board_no;
+	}
+	public String getCheck_date() {
+		return check_date;
+	}
+	public void setCheck_date(String check_date) {
+		this.check_date = check_date;
+	}
 }

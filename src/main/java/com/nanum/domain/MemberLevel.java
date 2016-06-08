@@ -1,10 +1,10 @@
-package com.nanum.domain;
 /*
 @FileName : MemberLevel.java
 @Project : NANUM
 @Date : 2016. 6. 7.
 @Author: 신진우
 */
+package com.nanum.domain;
  
 /*      
  @Class : MemberLevel

@@ -1,10 +1,10 @@
-package com.nanum.domain;
 /*
 @FileName : Report.java
 @Project : NANUM
 @Date : 2016. 6. 8.
 @Author: 신진우
 */
+package com.nanum.domain;
  
 /*      
  @Class : Report

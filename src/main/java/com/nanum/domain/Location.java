@@ -1,26 +1,63 @@
 /*
 	@FileName : Location.java
-	@Project
-	@Date :2016. 6. 8.
-	@Author: ÇÑ¼ö¹Î
+	@Project : NANUM
+	@Date : 2016. 6. 8.
+	@Author : í•œìˆ˜ë¯¼
 */
 package com.nanum.domain;
 
 /*  	 
-	@Class:Location
-	@Date: 2016. 6. 8.
-	@Author:ÇÑ¼ö¹Î
-*/ 
-public class Location
-{
-	/*
-	CREATE TABLE CHECKED 
-	(
-		checked_no NUMBER NOT NULL, /Æò°¡ ¹øÈ£ /
-		checked_score NUMBER NOT NULL, /Æò°¡ Á¡¼ö/
-		checked_content VARCHAR2(1000) NOT NULL, / Æò°¡ ±Û /
-		member_id NUMBER NOT NULL / Æò°¡ÀÚ /
-	);
-	*/
+	@Class : Location
+	@Date : 2016. 6. 8.
+	@Author: í•œìˆ˜ë¯¼
 
+//ê´€ë ¨ëœ í…Œì´ë¸” ìƒì„±ë¬¸
+CREATE TABLE LOCATION (
+	location_no NUMBER NOT NULL, 
+	location_wedo NUMBER NOT NULL,   
+	location_kyoungdo NUMBER NOT NULL,   
+	location_name VARCHAR2(50) NOT NULL   
+);
+*/
+
+public class Location{
+	
+	private int location_no; //ìœ„ì¹˜ì •ë³´ ë²ˆí˜¸ 
+	private int location_wedo; //ìœ„ë„
+	private int location_kyoungdo; //ê²½ë„
+	private String location_name; //ì§€ì—­ëª…
+	
+	/*
+	Update
+	
+	@Date : 2016. 6. 8.
+	@Author : ì‹ ì§„ìš°
+	@Contents : DTO getter,setter ì¶”ê°€
+	
+	*/
+	
+	public int getLocation_no() {
+		return location_no;
+	}
+	public void setLocation_no(int location_no) {
+		this.location_no = location_no;
+	}
+	public int getLocation_wedo() {
+		return location_wedo;
+	}
+	public void setLocation_wedo(int location_wedo) {
+		this.location_wedo = location_wedo;
+	}
+	public int getLocation_kyoungdo() {
+		return location_kyoungdo;
+	}
+	public void setLocation_kyoungdo(int location_kyoungdo) {
+		this.location_kyoungdo = location_kyoungdo;
+	}
+	public String getLocation_name() {
+		return location_name;
+	}
+	public void setLocation_name(String location_name) {
+		this.location_name = location_name;
+	}
 }

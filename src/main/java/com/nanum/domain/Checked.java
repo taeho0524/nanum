@@ -1,32 +1,63 @@
 /*
 	@FileName : Checked.java
-	@Project
-	@Date :2016. 6. 8.
-	@Author: ÇÑ¼ö¹Î
+	@Project : NANUM
+	@Date : 2016. 6. 8.
+	@Author : í•œìˆ˜ë¯¼
 */
 package com.nanum.domain;
 /*  	 
-	 @Class:Checked
-	 @Date: 2016. 6. 8.
-	 @Author:ÇÑ¼ö¹Î
-*/ 
+	 @Class : Checked
+	 @Date : 2016. 6. 8.
+	 @Author : í•œìˆ˜ë¯¼
 
-public class Checked 
-{
-	int checked_no;
-	int checked_score;
-	String checked_content;
-	int member_id;
+//ê´€ë ¨ëœ í…Œì´ë¸” ìƒì„±ë¬¸
+ CREATE TABLE CHECKED (
+	checked_no NUMBER NOT NULL,   
+	checked_score NUMBER NOT NULL,   
+	checked_content VARCHAR2(1000) NOT NULL, 
+	member_id NUMBER NOT NULL  
+);
+*/
+
+
+public class Checked{
+	
+	private int checked_no; //í‰ê°€ ë²ˆí˜¸
+	private int checked_score; //í‰ê°€ ì ìˆ˜
+	private String checked_content; //í‰ê°€ ê¸€
+	private int member_id; //í‰ê°€ì 
 	
 	/*
-	 CREATE TABLE CHECKED 
-	 (
-		checked_no NUMBER NOT NULL, /Æò°¡ ¹øÈ£ /
-		checked_score NUMBER NOT NULL, /Æò°¡ Á¡¼ö/
-		checked_content VARCHAR2(1000) NOT NULL, / Æò°¡ ±Û /
-		member_id NUMBER NOT NULL / Æò°¡ÀÚ /
-	 );
-	 */
-
-
+	Update
+	
+	@Date : 2016. 6. 8.
+	@Author : ì‹ ì§„ìš°
+	@Contents : DTO getter,setter ì¶”ê°€
+	
+	*/
+	
+	public int getChecked_no() {
+		return checked_no;
+	}
+	public void setChecked_no(int checked_no) {
+		this.checked_no = checked_no;
+	}
+	public int getChecked_score() {
+		return checked_score;
+	}
+	public void setChecked_score(int checked_score) {
+		this.checked_score = checked_score;
+	}
+	public String getChecked_content() {
+		return checked_content;
+	}
+	public void setChecked_content(String checked_content) {
+		this.checked_content = checked_content;
+	}
+	public int getMember_id() {
+		return member_id;
+	}
+	public void setMember_id(int member_id) {
+		this.member_id = member_id;
+	}
 }

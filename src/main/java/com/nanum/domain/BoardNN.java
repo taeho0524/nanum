@@ -1,57 +1,148 @@
 /*
 	@FileName : BoardNN.java
-	@Project
-	@Date :2016. 6. 7.
-	@Author: 
-	 ÇÑ¼ö¹Î
+	@Project : NANUM
+	@Date : 2016. 6. 7.
+	@Author : í•œìˆ˜ë¯¼
 */
 package com.nanum.domain; 
 /*  	 
-	 @Class:BoardNN
-	 @Date: 2016. 6. 7.
- 	 @Author:ÇÑ¼ö¹Î
-*/  
-
-
-public class BoardNN 
-{
-	int board_no;
-	String  board_title;
-	String  board_category;
-	String  board_image_title;
-	String  board_image_detail;
-	String  board_movie_url;
-	String  board_content;
-	int  board_account;
-	String  board_date;
-	int  board_term;
-	int  board_hit;
-	int  board_like;
-	int member_id;
-	int  board_level;
-	int location_no;
+	 @Class : BoardNN
+	 @Date : 2016. 6. 7.
+ 	 @Author : í•œìˆ˜ë¯¼
+ 
+ //ê´€ë ¨ëœ í…Œì´ë¸” ìƒì„±ë¬¸
+ CREATE TABLE BOARD_NN (
+		board_no NUMBER NOT NULL,   
+		board_title VARCHAR2(100) NOT NULL,
+		board_category VARCHAR2(20) NOT NULL,   
+		board_image_title VARCHAR2(1000) NOT NULL,   
+		board_image_detail VARCHAR2(1000) NOT NULL, 
+		board_movie_url VARCHAR2(1000) NOT NULL,  
+		board_content VARCHAR2(1000) NOT NULL,   
+		board_account NUMBER NOT NULL,   
+		board_date DATE NOT NULL,   
+		board_term NUMBER NOT NULL,   
+		board_hit NUMBER NOT NULL,   
+		board_like NUMBER NOT NULL,   
+		member_id NUMBER NOT NULL,   
+		board_level NUMBER NOT NULL,   
+		location_no NUMBER NOT NULL   
+	);
+*/
+public class BoardNN {
 	
+	private int board_no; //ê²Œì‹œê¸€ ë²ˆí˜¸
+	private String  board_title; //ì œëª©
+	private String  board_category; //ì¹´í…Œê³ ë¦¬
+	private String  board_image_title; //ëŒ€ë¬¸ ì‚¬ì§„
+	private String  board_image_detail; //ìƒì„¸ ë‚´ìš© ì‚¬ì§„ 
+	private String  board_movie_url; //ë™ì˜ìƒ ì£¼ì†Œ 
+	private String  board_content; //ë‚´ìš©
+	private int  board_account; //ê¸ˆì•¡
+	private String  board_date; //ë“±ë¡ì¼
+	private int  board_term; //ë“±ë¡ê¸°ê°„
+	private int  board_hit; //ì¡°íšŒìˆ˜
+	private int  board_like; //ì¢‹ì•„ìš”
+	private int member_id; //íšŒì›ë²ˆí˜¸
+	private int  board_level; //ê¶Œí•œë²ˆí˜¸
+	private int location_no; //ìœ„ì¹˜ì •ë³´ ë²ˆí˜¸
 	
 	/*
-	//°ü·ÃµÈ Å×ÀÌºí »ı¼º¹® 
-	//µî·Ï °Ô½Ã±Û
-	CREATE TABLE BOARD_NN (
-		board_no NUMBER NOT NULL, //°Ô½Ã±Û ¹øÈ£ 
-		board_title VARCHAR2(100) NOT NULL, //Á¦¸ñ 
-		board_category VARCHAR2(20) NOT NULL,  //Ä«Å×°í¸® 
-		board_image_title VARCHAR2(1000) NOT NULL,  //´ë¹® »çÁø 
-		board_image_detail VARCHAR2(1000) NOT NULL,  //»ó¼¼ ³»¿ë »çÁø 
-		board_movie_url VARCHAR2(1000) NOT NULL,  //µ¿¿µ»ó ÁÖ¼Ò 
-		board_content VARCHAR2(1000) NOT NULL,  //³»¿ë 
-		board_account NUMBER NOT NULL, // ±İ¾× 
-		board_date DATE NOT NULL,  //µî·ÏÀÏ 
-		board_term NUMBER NOT NULL,  //µî·Ï±â°£ 
-		board_hit NUMBER NOT NULL, //Á¶È¸¼ö 
-		board_like NUMBER NOT NULL, // ÁÁ¾Æ¿ä 
-		member_id NUMBER NOT NULL, // È¸¿ø¹øÈ£ 
-		board_level NUMBER NOT NULL, // ±ÇÇÑ¹øÈ£ 
-		location_no NUMBER NOT NULL // À§Ä¡Á¤º¸ ¹øÈ£ 
-	);
-
+	Update
+	
+	@Date : 2016. 6. 8.
+	@Author : ì‹ ì§„ìš°
+	@Contents : DTO getter,setter ì¶”ê°€
+	
 	*/
+	public int getBoard_no() {
+		return board_no;
+	}
+	public void setBoard_no(int board_no) {
+		this.board_no = board_no;
+	}
+	public String getBoard_title() {
+		return board_title;
+	}
+	public void setBoard_title(String board_title) {
+		this.board_title = board_title;
+	}
+	public String getBoard_category() {
+		return board_category;
+	}
+	public void setBoard_category(String board_category) {
+		this.board_category = board_category;
+	}
+	public String getBoard_image_title() {
+		return board_image_title;
+	}
+	public void setBoard_image_title(String board_image_title) {
+		this.board_image_title = board_image_title;
+	}
+	public String getBoard_image_detail() {
+		return board_image_detail;
+	}
+	public void setBoard_image_detail(String board_image_detail) {
+		this.board_image_detail = board_image_detail;
+	}
+	public String getBoard_movie_url() {
+		return board_movie_url;
+	}
+	public void setBoard_movie_url(String board_movie_url) {
+		this.board_movie_url = board_movie_url;
+	}
+	public String getBoard_content() {
+		return board_content;
+	}
+	public void setBoard_content(String board_content) {
+		this.board_content = board_content;
+	}
+	public int getBoard_account() {
+		return board_account;
+	}
+	public void setBoard_account(int board_account) {
+		this.board_account = board_account;
+	}
+	public String getBoard_date() {
+		return board_date;
+	}
+	public void setBoard_date(String board_date) {
+		this.board_date = board_date;
+	}
+	public int getBoard_term() {
+		return board_term;
+	}
+	public void setBoard_term(int board_term) {
+		this.board_term = board_term;
+	}
+	public int getBoard_hit() {
+		return board_hit;
+	}
+	public void setBoard_hit(int board_hit) {
+		this.board_hit = board_hit;
+	}
+	public int getBoard_like() {
+		return board_like;
+	}
+	public void setBoard_like(int board_like) {
+		this.board_like = board_like;
+	}
+	public int getMember_id() {
+		return member_id;
+	}
+	public void setMember_id(int member_id) {
+		this.member_id = member_id;
+	}
+	public int getBoard_level() {
+		return board_level;
+	}
+	public void setBoard_level(int board_level) {
+		this.board_level = board_level;
+	}
+	public int getLocation_no() {
+		return location_no;
+	}
+	public void setLocation_no(int location_no) {
+		this.location_no = location_no;
+	}
 }

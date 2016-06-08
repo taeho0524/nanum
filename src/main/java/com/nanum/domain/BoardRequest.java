@@ -1,46 +1,111 @@
 /*
 @FileName : BoardRequest.java
-@Project
-@Date :2016. 6. 8.
-@Author: ÇÑ¼ö¹Î
+@Project : NANUM
+@Date : 2016. 6. 8.
+@Author : í•œìˆ˜ë¯¼
 */
 package com.nanum.domain;
 
 /*  	 
- 	 @Class:BoardRequest
- 	 @Date: 2016. 6. 8.
-	 @Author:ÇÑ¼ö¹Î
-*/ 
+ 	 @Class : BoardRequest
+ 	 @Date : 2016. 6. 8.
+	 @Author : í•œìˆ˜ë¯¼
 
-public class BoardRequest 
-{
+//ê´€ë ¨ëœ í…Œì´ë¸” ìƒì„±ë¬¸
+CREATE TABLE BOARD_REQUEST (
+	help_no NUMBER NOT NULL,
+	request_title VARCHAR2(100) NOT NULL,  
+	request_category VARCHAR2(20) NOT NULL,   
+	request_content VARCHAR2(1000) NOT NULL,   
+	request_account NUMBER NOT NULL,   
+	request_date DATE NOT NULL,   
+	request_term NUMBER NOT NULL,   
+	member_id NUMBER NOT NULL,   
+	board_level NUMBER NOT NULL,   
+	location_no NUMBER NOT NULL   
+);
+*/
+
+public class BoardRequest{
 	
-	int help_no;
-	String request_title;
-	String request_category;
-	String request_content;
-	int request_account;
-	String request_date;
-	int request_term;
-	int member_id;
-	int board_level;
-	int location_no;
-
+	private int help_no; //ê²Œì‹œê¸€ ë²ˆí˜¸
+	private String request_title; //ì œëª©
+	private String request_category; //ì¹´í…Œê³ ë¦¬
+	private String request_content; //ë‚´ìš©
+	private int request_account; //ê¸ˆì•¡
+	private String request_date; //ë“±ë¡ì¼
+	private int request_term; //ë“±ë¡ê¸°ê°„
+	private int member_id; //íšŒì›ë²ˆí˜¸
+	private int board_level; //ê¶Œí•œë²ˆí˜¸
+	private int location_no; //ìœ„ì¹˜ì •ë³´ ë²ˆí˜¸
+	
 	/*
-
-	CREATE TABLE BOARD_REQUEST 
-	(
-	help_no NUMBER NOT NULL, // °Ô½Ã±Û ¹øÈ£ 
-	request_title VARCHAR2(100) NOT NULL, // Á¦¸ñ 
-	request_category VARCHAR2(20) NOT NULL, / Ä«Å×°í¸®
-	request_content VARCHAR2(1000) NOT NULL, /³»¿ë 
-	request_account NUMBER NOT NULL, / ±İ¾× 
-	request_date DATE NOT NULL, / µî·ÏÀÏ 
-	request_term NUMBER NOT NULL, / µî·Ï±â°£ 
-	member_id NUMBER NOT NULL, / È¸¿ø¹øÈ£ 
-	board_level NUMBER NOT NULL, / ±ÇÇÑ¹øÈ£ 
-	location_no NUMBER NOT NULL / À§Ä¡Á¤º¸ ¹øÈ£ 
-	);
-
-	 */
+	Update
+	
+	@Date : 2016. 6. 8.
+	@Author : ì‹ ì§„ìš°
+	@Contents : DTO getter,setter ì¶”ê°€
+	
+	*/
+	
+	public int getHelp_no() {
+		return help_no;
+	}
+	public void setHelp_no(int help_no) {
+		this.help_no = help_no;
+	}
+	public String getRequest_title() {
+		return request_title;
+	}
+	public void setRequest_title(String request_title) {
+		this.request_title = request_title;
+	}
+	public String getRequest_category() {
+		return request_category;
+	}
+	public void setRequest_category(String request_category) {
+		this.request_category = request_category;
+	}
+	public String getRequest_content() {
+		return request_content;
+	}
+	public void setRequest_content(String request_content) {
+		this.request_content = request_content;
+	}
+	public int getRequest_account() {
+		return request_account;
+	}
+	public void setRequest_account(int request_account) {
+		this.request_account = request_account;
+	}
+	public String getRequest_date() {
+		return request_date;
+	}
+	public void setRequest_date(String request_date) {
+		this.request_date = request_date;
+	}
+	public int getRequest_term() {
+		return request_term;
+	}
+	public void setRequest_term(int request_term) {
+		this.request_term = request_term;
+	}
+	public int getMember_id() {
+		return member_id;
+	}
+	public void setMember_id(int member_id) {
+		this.member_id = member_id;
+	}
+	public int getBoard_level() {
+		return board_level;
+	}
+	public void setBoard_level(int board_level) {
+		this.board_level = board_level;
+	}
+	public int getLocation_no() {
+		return location_no;
+	}
+	public void setLocation_no(int location_no) {
+		this.location_no = location_no;
+	}
 }

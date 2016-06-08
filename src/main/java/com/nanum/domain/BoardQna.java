@@ -1,34 +1,69 @@
 /*
 	@FileName : BoardQna.java
-	@Project
-	@Date :2016. 6. 7.
-	@Author: ÇÑ¼ö¹Î
+	@Project : NANUM
+	@Date : 2016. 6. 7.
+	@Author: í•œìˆ˜ë¯¼
 */
 package com.nanum.domain;
 /*  	 
- 	@Class:BoardQna
- 	@Date: 2016. 6. 7.
-	@Author:ÇÑ¼ö¹Î
-*/ 
-public class BoardQna 
-{
-	int qna_no;
-	int board_no;
-	String qna_content;
-	String qna_date;
-	int qna_member_no;
+ 	@Class : BoardQna
+ 	@Date : 2016. 6. 7.
+	@Author : í•œìˆ˜ë¯¼
+
+//ê´€ë ¨ëœ í…Œì´ë¸” ìƒì„±ë¬¸
+CREATE TABLE BOARD_QNA (
+	qna_no NUMBER NOT NULL,  
+	board_no NUMBER NOT NULL, 
+	qna_content VARCHAR2(1000) NOT NULL,  
+	qna_date DATE NOT NULL,  
+	qna_member_no NUMBER NOT NULL 
+);
+*/
+public class BoardQna{
 	
+	private int qna_no; //ë‚˜ëˆ”ë¬¸ì˜ ë²ˆí˜¸
+	private int board_no; //ê²Œì‹œê¸€ ë²ˆí˜¸ 
+	private String qna_content; //ë‚˜ëˆ”ë¬¸ì˜ ë‚´ìš©
+	private String qna_date; //ë‚˜ëˆ”ë¬¸ì˜ ë‚ ì§œ
+	private int qna_member_no; //ë‚˜ëˆ”ë¬¸ì˜ íšŒì› ë²ˆí˜¸
 	
 	/*
- 	CREATE TABLE BOARD_QNA 
- 	(
-	qna_no NUMBER NOT NULL, // ³ª´®¹®ÀÇ ¹øÈ£
-	board_no NUMBER NOT NULL, //°Ô½Ã±Û ¹øÈ£ 
-	qna_content VARCHAR2(1000) NOT NULL, // ³ª´®¹®ÀÇ ³»¿ë 
-	qna_date DATE NOT NULL, //³ª´®¹®ÀÇ ³¯Â¥ 
-	qna_member_no NUMBER NOT NULL // ³ª´®¹®ÀÇ È¸¿ø ¹øÈ£ 
-	);
- 
- */
-
+	Update
+	
+	@Date : 2016. 6. 8.
+	@Author : ì‹ ì§„ìš°
+	@Contents : DTO getter,setter ì¶”ê°€
+	
+	*/
+	
+	public int getQna_no() {
+		return qna_no;
+	}
+	public void setQna_no(int qna_no) {
+		this.qna_no = qna_no;
+	}
+	public int getBoard_no() {
+		return board_no;
+	}
+	public void setBoard_no(int board_no) {
+		this.board_no = board_no;
+	}
+	public String getQna_content() {
+		return qna_content;
+	}
+	public void setQna_content(String qna_content) {
+		this.qna_content = qna_content;
+	}
+	public String getQna_date() {
+		return qna_date;
+	}
+	public void setQna_date(String qna_date) {
+		this.qna_date = qna_date;
+	}
+	public int getQna_member_no() {
+		return qna_member_no;
+	}
+	public void setQna_member_no(int qna_member_no) {
+		this.qna_member_no = qna_member_no;
+	}
 }
