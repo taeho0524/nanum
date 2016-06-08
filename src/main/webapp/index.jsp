@@ -7,6 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<a href="login.nn">login.nn</a>
+	<a href="login.nn">login.nn</a><br>
+	<a href="signup.nn">singup.nn</a><br>
+	<a href="forgot_account.nn">forgot_account.nn</a><br>
 </body>
 </html>
