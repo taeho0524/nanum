@@ -1,9 +1,68 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*==================================common====================================*/
+.b{border:1px solid #000000;}
+.color-3{color:#333333;}
+.color-8{color:#888888; font-weight:400; vertical-align:middle; margin-top:3px;}
+.font-14{font-size:14px;}
+.width-13{width:13%;}
+.width-40{width:40%;}
+.width-45{width:45%;}
+.width-50{width:50%;}
+.width-100{width:100%;}
+.margin-5{margin-top:5px;}
+.margin-10{margin-top:10px;}
+.margin-15{margin-top:15px;}
+.margin-20{margin-top:20px;}
+.margin-30{margin-top:30px;}
+.margin-55{margin-top:55px;}
+.margin-0-auto{margin:0 auto;}
+
+.padding-10{padding:10px;}
+
+.text-right{text-align:right;}
+.text-center{text-align:center;}
+.shadow-box{background: #fff; border-left: solid #e5e5e5 1px; border-right: solid #e5e5e5 1px; border-top: solid #e5e5e5 1px; box-shadow: 0 1px 2px #ccc;}
+.new-{padding:12px 0 14px 20px;}
+.btn-primary{color:#FFFFFF; line-height:1.2; background:#FF4B4E; cursor:pointer;}
+.btn{border-radius:5px; width:100%; padding:6px 12px; font-size:14px; opacity:0.8; box-sizing:border-box; text-align:center;}
+.btn-info{color: #fff; background-color: #6fcbca; border-color: #5cc4c3;}
+.btn-default{color: #333; background-color: #fff; border-color: #ccc;}
+.btn-block{display:block; width:100%;}
+.btn:hover{opacity:1;}
+.new-section{padding-bottom: 30px; margin-bottom: 30px; border-bottom: dotted #ccc 1px;}
+.new-body{padding:30px 15px;}
+.row{position:relative;}
+.rows{}
+.rows:after{content:""; display:block; clear:both;}
+.new-must{padding: 3px 5px; font-size: 11px; color: #f3865b; border: 1px solid #f3865b;}
+.new-select{padding: 3px 5px; font-size: 11px; color: #888; border: 1px solid #888;}
+.form-control{box-shadow: 0 1px 2px #ccc; border: 1px solid #ccc; transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s; width:100%; padding:6px 12px; max-width:100%; box-sizing:border-box;}
+		
+.float-left{float:left;}
+.float-right{float:right;}
+
+.border-round{border-radius:500px;}
+.border-box{box-sizing:border-box;}
+.margin-left-10{margin-left:10px;}
+.position-relative{position:relative;}
+		
+.inline-block{display:inline-block;}
+.page-min-height{min-height:550px;}
+.list-round{border-radius:500px; background:#F1F1F1; width:3px; height:3px; position:absolute; top:15px; left:2px;}		
+		
+.new-pix-body{padding:15px; background-color: #fbfbfb;}	
+.sub-img{position:absolute; top:7px; right:7px;}
+
+/*==================================common====================================*/
+=======
 /*  
 
 	@FileName : common.css
 	@Project : NANUM
 	@Date : 2016. 6. 8.
-	@Author : ÃÖÅÂÈ£
+	@Author : ï¿½ï¿½ï¿½ï¿½È£
 
 */
 
