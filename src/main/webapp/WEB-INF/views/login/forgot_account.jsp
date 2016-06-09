@@ -1,17 +1,31 @@
-<!DOCTYPE html>
+<!-- 
+
+	@FileName : forgot_account.jsp
+	@Project : NANUM
+	@Date : 2016. 6. 8.
+	@Author : 최태호
+
+-->
+
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<!-- reset -->
-	<link rel="stylesheet" type="text/css" href="css/reset.css">
-	<link rel="stylesheet" type="text/css" href="css/login.css">
-	<title>NANUM 계정 관리</title></head>
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/login.css">
+	<title>NANUM 계정 관리</title>
+
+</head>
 <body>
 	<div id="wrap">
         <div id="login-wrap">
             <div class="login-logo">
                 <a href="#">
-                    <img src="images/login-logo.png" alt="login-logo">
+                    <img src="${pageContext.request.contextPath}/resources/images/login-logo.png" alt="login-logo">
                 </a>
             </div>
             
