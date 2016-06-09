@@ -1,0 +1,59 @@
+/*  
+
+	@FileName : common.css
+	@Project : NANUM
+	@Date : 2016. 6. 8.
+	@Author : ÃÖÅÂÈ£
+
+*/
+
+
+
+@charset "utf-8";
+/* CSS Document */
+
+
+/*=================================header=====================================*/
+header{width:100%; background-color:#18C0C1;}
+.head-top{margin:0 auto; width:1024px; height:50px; position:relative;}
+        
+.head-logo{height:100%; width:180px;}
+.head-logo img{height:30px; padding:7px;}
+        
+.head-search-box{position:relative;}
+.sub-img{position:absolute; top:7px; right:7px;}
+.head-search{width:230px; position:absolute; top:9px; left:135px;}
+		
+		
+.head-right{position:absolute; right:0; top:0;}
+.head-right>div{float:left; padding:14px; font-size:14px;}
+		
+		
+.head-bottom{background: #fff; border-top: solid #e5e5e5 1px; box-shadow: 0 1px 2px #ccc; width:100%;}
+.head-category{width:1024px; margin:0 auto;}
+.head-category ul:after{display:block; content:""; clear:both;}
+.head-category ul{padding-left:10px;}
+.head-category ul li{float:left;}
+.head-category ul li h5{padding: 7px 32px 7px 0; font-weight:400;}
+
+
+/*================================footer=====================================*/
+
+footer{width:100%; height:240px; background: #19D1D4;}
+footer a{color:#FFFFFF;}
+.footer-box{width:1024px; margin:0 auto; position:relative; font-size:14px; color:#FFFFFF; font-weight:400;}
+			
+.footer-left{width:360px; padding-top:30px;}
+.footer-left>div{padding-top:10px;}
+			
+.footer-center{position:absolute; left:400px; top:95px;}
+.footer-center>div{padding-bottom:6px;}
+			
+.footer-right{position:absolute; left:800px; top:95px;}
+.footer-right>div{padding-bottom:6px;}
+
+
+
+
+
+
