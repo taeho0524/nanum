@@ -18,6 +18,7 @@
 <!-- reset -->
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/reset.css">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/login.css">
+<script src="${pageContext.request.contextPath}/resources/js/facebook.js" ></script>
 </head>
 <body>
 
@@ -32,7 +33,7 @@
             
             <div class="login-box">
       
-                <a class="btn btn-facebook" href="#">&nbsp;&nbsp;페이스북으로 빠른 가입</a>
+                <a class="btn btn-facebook fb_btn" onclick="getInfo()" >&nbsp;&nbsp;페이스북으로 빠른 가입</a>
                 <div class="login-text">
                    <div></div>
                    <p>또는</p>
@@ -85,10 +86,10 @@
             <div class="copyright">
                 <h5>Copyright &copy; 2016 Nanum Inc. All rights reserved.</h5>
             </div>
+            <div id="status"></div>
             
         </div>
 	</div>
-
-
+	
 </body>
 </html>

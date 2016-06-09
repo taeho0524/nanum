@@ -14,8 +14,13 @@
 <head>
 	<meta charset="UTF-8">
     <!-- reset -->
+    	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/reset.css">
+		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/common.css">
+    
+		<!--   
         <link rel="stylesheet" type="text/css" href="css/reset.css">
-        <link rel="stylesheet" type="text/css" href="css/common.css">
+        <link rel="stylesheet" type="text/css" href="css/common.css"> 
+       	 -->
 </head>
 <footer>
 	<div class="footer-box">
