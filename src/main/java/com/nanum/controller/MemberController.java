@@ -26,6 +26,16 @@ public class MemberController {
 		return "/login/forgot_account";
 	}
 	
+	@RequestMapping("/signup.nn.nn")
+	public String sign_up(){
+		System.out.println("signup.nn");
+		return "/login/signup";
+	}
+	@RequestMapping("/board_request.nn")
+	public String board_request(){
+		System.out.println("board_request.nn");
+		return "/login/board_request";
+	}
 	
 	
 	

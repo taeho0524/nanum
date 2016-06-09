@@ -14,7 +14,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>NANUM 도와주세요</title>
-	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/reset.css">
+    
 	<style type="text/css">
 		body{overflow-y:scroll;}
     	.container-body{background-color:#f1f1f1;}

@@ -16,7 +16,11 @@
 <!-- reset -->
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/reset.css">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/login.css">
+
+<script src="${pageContext.request.contextPath}/resources/js/facebook.js" ></script>
+
 <title>login</title>
+
 </head>
 <body>
 	
@@ -25,9 +29,7 @@
         	<a href="#">
             	<img src="${pageContext.request.contextPath}/resources/images/login-logo.png" alt="login-logo">
             </a>
-        </div>
-		
-		
+        </div>		
 		<div class="login-box">
         	<form method="" action="">
         		<div class="login-form">
@@ -47,7 +49,7 @@
                 	<input type="submit" name="loginBtn" class="btn btn-primary" value="로그인">
                 </div>
                 <div class="margin-15">
-                	<input type="button" name="loginBtn" class="btn btn-facebook" value="페이스북 로그인">
+                	<input type="button" onclick="login()" name="loginBtn" class="btn btn-facebook" value="페이스북 로그인">
                 </div>
             </form>
             <div class="row-login">
@@ -62,9 +64,10 @@
 		<div class="copyright">
             <h5>Copyright &copy; 2016 Nanum Inc. All rights reserved.</h5>
         </div>
+        <div id="status"></div>
 		
 	</div>
-	
+
 </body>
 
 </html>
