@@ -1,0 +1,449 @@
+<head>
+<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+<title>게시글 제목으로 타이틀</title>
+
+	<style type="text/css">
+		body{overflow-y:scroll;background-color:#f1f1f1;}
+    	.container-body{width:100%; height:100%;}
+		.container{width:1024px; margin:0 auto;}
+    	.board-detail-box{width:66%;}
+		
+		.board-detail-main-img{width: 652px; height: 488px;}
+		.board-detail-left{padding: 20px 15px 10px; border-top: solid #e5e5e5 1px;}
+		
+		.default-price{text-align: right;}
+		.detail-info{padding: 15px 0; border-top: dashed #ccc 1px;}
+		.board-detail-star>div>div{color:#39BCD1; font-size:45px; letter-spacing:1px;}
+		.board-detail-text{margin: 20px 0; padding: 0 15px;}
+		.board-detail-images{padding: 0 15px 20px;}
+		.board-detail-images>div{margin-top:15px;}
+		.board-detail-images>div:first-child{margin-top:0;}
+		.board-detail-images img, video{max-width: 100%; border: 0; vertical-align: top;}
+		
+		
+		.detail-comment{padding: 15px; border-bottom: solid #e5e5e5 1px;}
+		.detail-comment:after{content:""; display:block; clear:both;}
+		.detail-comment-img{position: absolute; width: 50px; height:50px; overflow: hidden;}
+		
+		.detail-comment-seller{background-color: #eee;}
+		.detail-comment-seller img{width:100%;}
+	
+		.rows{width:1056px; margin-left:-15px;}
+		.category-content{float: left; position: relative; width: 25%; min-height: 1px; box-sizing:border-box; padding:0 15px;}
+		
+		.category-content-title{margin-top: 10px; height: 34px; color: #333; letter-spacing: -1px;
+    display: -webkit-box; overflow: hidden; word-break: break-all; text-overflow: ellipsis;}
+	
+		.category-img{position: relative; border-bottom: solid #e5e5e5 1px;}
+		.category-img>img{width: 224px; height: 168px;}
+		.category-price{position: absolute; top: 10px; right: 0;}
+		.category-price span{padding: 3px 5px; font-size: 15px; color: #fff; background-color:rgba(0,0,0,0.72);}
+		.category-profile{position: absolute; right: 10px; bottom: -15px;}
+		.category-profile-body{width: 46px; height: 46px; padding: 1px; border: 1px solid #e5e5e5;
+    background-color: #fff; border-radius: 500px; position: relative; z-index: 1;}
+		.category-profile-img{position: absolute; top: 2px; right: 2px; width: 42px; z-index: 3;}
+		.category-profile-img img{border-radius:500px; width:100%;}
+	
+		.category-id{width: 92px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;
+    word-break: break-all;}
+	 	.category-star{position: absolute; top: 0; right: 0;}
+		.category-star>h6{width: 112px; text-align: right; margin-top: -1px;}
+		
+		
+		
+		/*============================board-detail-profile===============================*/
+		.board-detail-profile{width:33%; padding:0 15px; box-sizing:border-box;}
+		.board-detail-profile-box{}
+		.board-detail-profile-top{position: absolute; top: -50px; width:100px;}
+		.board-detail-profile-top>a>img{width: 100px; padding: 2px; border: 1px solid #e5e5e5;    background-color: #fff;}
+		
+		
+		
+		
+		
+    </style>
+</head>
+
+
+
+<div class="container-body">
+	<div class="container">
+    	<div class="row margin-30">
+        
+        	<!-- board-detail-box-->
+        	<div class="board-detail-box inline-block">
+            
+            	<!-- board top box -->
+            	<div class="row">
+                	<div>
+                    	<div class="shadow-box">
+                        	<div class="position-relative">
+                            	<div class="text-center">
+                                	<img src="images/login-bg-s.jpg" alt="" class="board-detail-main-img" title="게시글 제목으로">
+                                </div>
+                            </div>
+                            
+                            <div class="board-detail-left">
+                            	<div class="row">
+                                	<h3>게시글 제목 뿌려주기</h3>
+                                </div>
+                                <div class="row">
+                                	<h6 class="inline-block width-50">
+                                    	<div class="margin-15">
+                                        	<a href="#">Home</a>&nbsp;&nbsp;>&nbsp;&nbsp; 
+                                            <a href="#">컴퓨터</a>&nbsp;&nbsp;>&nbsp;&nbsp;
+                                            <a href="#">프로그래밍</a>
+                                        </div>
+                                    </h6>
+                                    <h3 class="inline-block float-right">
+                                    	<div class="default-price">
+                                        	&#8361;&nbsp;<b>5,000</b>
+                                        </div>
+                                    </h3>
+                                </div>
+                                <div class="detail-info margin-15 font-14">
+                                	<div class="row">
+                                    	<div class="inline-block color-8 width-50">연락 가능 시간</div>
+                                        <div class="inline-block text-right float-right">8 ~ 20시</div>
+                                    </div>
+                                    <div class="row margin-10">
+                                    	<div class="inline-block color-8 width-50">현재 / 최대 작업 개수</div>
+                                        <div class="inline-block text-right float-right">0개 / 5 개</div>
+                                    </div>
+                                    <div class="row margin-10">
+                                    	<div class="inline-block color-8 width-50">기본 작업일</div>
+                                        <div class="inline-block text-right float-right">1 일</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- board top box -->
+                
+                
+                <!-- 나눔 글-->
+                <div class="row">
+                	<!-- star -->
+                    <div>
+                    	<div class="margin-15 text-center">
+                        	<div class="board-detail-star width-100">
+                            	<div class="margin-0-auto width-50">
+                                	<div>★★★★★</div>
+                                </div>
+                            </div>
+                            <h5>
+                            	<b>0</b>&nbsp;
+                                개의 평가
+                            </h5>
+                        </div>
+                    </div>
+                    <!-- star -->
+                    
+                    <!-- 나눔설명 -->
+                    <div class="margin-30">
+                    	<h3>
+                        	<b>나눔설명</b>
+                        </h3>
+                        <div class="shadow-box margin-15">
+                        	<div class="board-detail-text font-14">
+                            	우리는 독수리 오형제<br>
+                                쳐부수자 알렉?<br><br>
+                                
+                                기본<br>
+                                -720p HD<br>
+                                -MP4<br>
+                                -재생시간 ~41초<br>
+                                -기본 배경음악<br><br>
+                                
+                                옵션<br>
+                                -빠른배송<br>
+                                -1080 Full HD<br>
+                                -추가수정<br>
+                                -투명한배경 및 로고를 요트에 최적화<br>
+                                -유료수정가능<br><br>
+                                
+                                필독<br>
+                                주문시 로고 혹은 간단한 슬로건을 투명한 배경으로된 PNG or PSD파일로 첨부해 주셔야합니다. 투명한 배경의 파일이 없을경우 옵션을 추가해주세요.
+                            </div>
+                            
+                            <div class="board-detail-images text-center">
+                            	<!-- 반복 .. 동영상은 iframe 으로 -->
+                                <div>
+                                	<img src="images/login-bg-s.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 나눔설명 -->
+                    
+                    
+                    <!-- 나눔평가 -->
+                    <div class="margin-55">
+                    	<h3>
+                        	<b>나눔평가</b>
+                        </h3>
+                    
+                        <!-- star -->
+                        <div>
+                            <div class="margin-15 text-center">
+                                <div class="board-detail-star width-100">
+                                    <div class="margin-0-auto width-50">
+                                        <div>★★★★★</div>
+                                    </div>
+                                </div>
+                                <h5>
+                                    <b>0</b>&nbsp;
+                                    개의 평가
+                                </h5>
+                            </div>
+                        </div>
+                        <!-- star -->
+                        
+                        <div class="comment">
+                        	<div class="margin-15 shadow-box">
+                            	<div class="detail-comment b">
+                                	<div class="detail-comment-img b">
+                                    	<img src="images/login-logo.png" alt="" class="border-round">
+                                    </div>
+                                </div>
+                                <div class="detail-comment detail-comment-seller"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <!-- 나눔 글-->
+            </div>
+            <!-- board-detail-box-->
+            
+            
+            
+            
+            
+            
+            
+            <!-- board-detail-profile -->
+            <div class="float-right board-detail-profile b">
+            	<div class="margin-55 shadow-box b">
+                	<div class="position-relative width-100 margin-0-auto b">
+                    	<div class="board-detail-profile-top b">
+                        	<a href="#">
+                            	<img class="border-round border-box" src="images/login-logo.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            
+            <!-- board-detail-profile -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!-- 비슷한 나눔-->
+            <div class="row margin-55">
+                	<div>
+                    	<h3>
+                        	<b>비슷한 나눔</b>
+                        </h3>
+                    </div>
+                    
+                    <div class="rows margin-0-auto">
+                        <!--4개 반복으로 뿌려주기 비슷한-->
+                        <div class="category-content">
+                            <div class="margin-30 shadow-box">
+                                <a href="#">
+                                    <div class="category-img">
+                                        <div class="category-price">
+                                            <span>&#8361;&nbsp;5,000</span>
+                                        </div>
+                                        <div class="category-profile">
+                                            <div class="position-relative">
+                                                <div class="category-profile-body"></div>
+                                                <div class="category-profile-img">
+                                                    <img src="images/login-logo.png" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img src="images/login-logo.png" alt="">
+                                    </div>
+                                </a>
+                                <div class="padding-10">
+                                    <h5 class="category-content-title">
+                                        <a href="#" target="_blank" class="color-3">
+                                            워드프레스를 적용하여 저렴하게 홈페이지를 만들어 드립니다
+                                        </a>
+                                    </h5>
+                                    <div class="margin-15 position-relative">
+                                        <h6 class="category-id">
+                                            <a href="#" class="color-8">
+                                                TAEHO
+                                            </a>
+                                        </h6>
+                                        <div class="category-star">
+                                            <h6>	
+                                                <div class="inline-block color-8">
+                                                    <div>★★★★★</div>
+                                                </div>
+                                                <div class="inline-block color-8">(0)</div>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--4개 반복으로 뿌려주기 비슷한-->
+                        
+                        <!--4개 반복으로 뿌려주기 비슷한-->
+                        <div class="category-content">
+                            <div class="margin-30 shadow-box">
+                                <a href="#">
+                                    <div class="category-img">
+                                        <div class="category-price">
+                                            <span>&#8361;&nbsp;5,000</span>
+                                        </div>
+                                        <div class="category-profile">
+                                            <div class="position-relative">
+                                                <div class="category-profile-body"></div>
+                                                <div class="category-profile-img">
+                                                    <img src="images/login-logo.png" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img src="images/login-logo.png" alt="">
+                                    </div>
+                                </a>
+                                <div class="padding-10">
+                                    <h5 class="category-content-title">
+                                        <a href="#" target="_blank" class="color-3">
+                                            워드프레스를 적용하여 저렴하게 홈페이지를 만들어 드립니다
+                                        </a>
+                                    </h5>
+                                    <div class="margin-15 position-relative">
+                                        <h6 class="category-id">
+                                            <a href="#" class="color-8">
+                                                TAEHO
+                                            </a>
+                                        </h6>
+                                        <div class="category-star">
+                                            <h6>	
+                                                <div class="inline-block color-8">
+                                                    <div>★★★★★</div>
+                                                </div>
+                                                <div class="inline-block color-8">(0)</div>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--4개 반복으로 뿌려주기 비슷한-->
+                        
+                        <!--4개 반복으로 뿌려주기 비슷한-->
+                        <div class="category-content">
+                            <div class="margin-30 shadow-box">
+                                <a href="#">
+                                    <div class="category-img">
+                                        <div class="category-price">
+                                            <span>&#8361;&nbsp;5,000</span>
+                                        </div>
+                                        <div class="category-profile">
+                                            <div class="position-relative">
+                                                <div class="category-profile-body"></div>
+                                                <div class="category-profile-img">
+                                                    <img src="images/login-logo.png" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img src="images/login-logo.png" alt="">
+                                    </div>
+                                </a>
+                                <div class="padding-10">
+                                    <h5 class="category-content-title">
+                                        <a href="#" target="_blank" class="color-3">
+                                            워드프레스를 적용하여 저렴하게 홈페이지를 만들어 드립니다
+                                        </a>
+                                    </h5>
+                                    <div class="margin-15 position-relative">
+                                        <h6 class="category-id">
+                                            <a href="#" class="color-8">
+                                                TAEHO
+                                            </a>
+                                        </h6>
+                                        <div class="category-star">
+                                            <h6>	
+                                                <div class="inline-block color-8">
+                                                    <div>★★★★★</div>
+                                                </div>
+                                                <div class="inline-block color-8">(0)</div>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--4개 반복으로 뿌려주기 비슷한-->
+                        
+                        <!--4개 반복으로 뿌려주기 비슷한-->
+                        <div class="category-content">
+                            <div class="margin-30 shadow-box">
+                                <a href="#">
+                                    <div class="category-img">
+                                        <div class="category-price">
+                                            <span>&#8361;&nbsp;5,000</span>
+                                        </div>
+                                        <div class="category-profile">
+                                            <div class="position-relative">
+                                                <div class="category-profile-body"></div>
+                                                <div class="category-profile-img">
+                                                    <img src="images/login-logo.png" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img src="images/login-logo.png" alt="">
+                                    </div>
+                                </a>
+                                <div class="padding-10">
+                                    <h5 class="category-content-title">
+                                        <a href="#" target="_blank" class="color-3">
+                                            워드프레스를 적용하여 저렴하게 홈페이지를 만들어 드립니다
+                                        </a>
+                                    </h5>
+                                    <div class="margin-15 position-relative">
+                                        <h6 class="category-id">
+                                            <a href="#" class="color-8">
+                                                TAEHO
+                                            </a>
+                                        </h6>
+                                        <div class="category-star">
+                                            <h6>	
+                                                <div class="inline-block color-8">
+                                                    <div>★★★★★</div>
+                                                </div>
+                                                <div class="inline-block color-8">(0)</div>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--4개 반복으로 뿌려주기 비슷한-->
+                        
+                    </div>
+                </div>
+           		<!-- 비슷한 나눔-->
+        </div>
+    </div>
+</div>
+
