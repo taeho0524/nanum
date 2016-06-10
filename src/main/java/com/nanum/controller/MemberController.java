@@ -28,6 +28,7 @@ public class MemberController {
 	
 	@RequestMapping("/signup.nn.nn")
 	public String sign_up(){
+		
 		System.out.println("signup.nn");
 		return "/login/signup";
 	}
