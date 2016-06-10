@@ -25,7 +25,7 @@
 <footer>
 	<div class="footer-box">
     	<div class="footer-left">
-        	<img src="images/header-logo.png" alt="">
+        	<img src="${pageContext.request.contextPath}/resources/images/header-logo.png" alt="">
         	<div>
             	 지역 근처를 기반으로 자신의 재능 나눔을 통해 다른 사용자들과 소통하는 나눔플랫폼서비스 입니다
             </div>

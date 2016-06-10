@@ -18,11 +18,27 @@
 			</list>
 		</property>
 	</bean>
+	<!--  
+		Update
+		
+		@Date : 2016. 6 .10
+		@Author : 최용진
+		@Contents : InternalResourceViewResolver 추가 및 Resolver 우선순위 설정
+	
+	-->
+	
 	<bean id="urlBasedViewResolver" 
 	   class="org.springframework.web.servlet.view.UrlBasedViewResolver">
 		<property name="viewClass" 
 		          value="org.springframework.web.servlet.view.tiles2.TilesView"	/>
-			
+		<property name="order" value="1" />	
+	</bean>
+	
+	<bean id="viewResolver"
+	class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	<property name="prefix" value="/views/" />
+	<property name="suffix" value=".jsp" />
+	<property name="order" value="2" />
 	</bean>
 	<!--  Tiles 설정 END  -->
 </beans>

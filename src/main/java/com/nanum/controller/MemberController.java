@@ -34,7 +34,7 @@ public class MemberController {
 	@RequestMapping("/board_request.nn")
 	public String board_request(){
 		System.out.println("board_request.nn");
-		return "/login/board_request";
+		return "board.board_request";
 	}
 	
 	
