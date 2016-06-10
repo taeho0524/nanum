@@ -23,14 +23,14 @@
 	<div class="head-top">
     	<div class="head-logo">
         	<a href="#">
-        		<img src="images/header-logo.png" alt="head-logo">
+        		<img src="${pageContext.request.contextPath}/resources/images/header-logo.png" alt="head-logo">
             </a>
         </div>
         <div class="head-search">
         	<form action="" method="">
             	<div class="head-search-box">
                 	<span>
-                    	<input type="image" class="sub-img" src="images/search.png" width="20">
+                    	<input type="image" class="sub-img" src="${pageContext.request.contextPath}/resources/images/search.png" width="20">
                     	<!--<img src="images/search.png" alt="search">-->
                     </span>
                 
