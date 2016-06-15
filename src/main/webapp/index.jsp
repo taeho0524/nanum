@@ -11,11 +11,10 @@
 	<a href="login.nn">login.nn</a><br>
 	<a href="signup.nn">singup.nn</a><br>
 	<a href="forgot_account.nn">forgot_account.nn</a><br>
-	<a href="signup.nn">sign_up</a><br>
 	<a href="board_request.nn">board_request.nn</a><br>
-
-
+	<a href="signup2.nn">signup2</a><br>
 </body>
 
 </html>
+
 

@@ -34,7 +34,7 @@
             
             <div class="login-box">
       
-                <a class="btn btn-facebook fb_btn" onclick="signup()" >&nbsp;&nbsp;페이스북으로 빠른 가입</a>
+                <a class="btn btn-facebook fb_btn" onclick="login()" >&nbsp;&nbsp;페이스북으로 빠른 가입</a>
                 <div class="login-text">
                    <div></div>
                    <p>또는</p>

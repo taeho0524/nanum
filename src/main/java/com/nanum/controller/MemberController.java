@@ -50,43 +50,79 @@ public class MemberController {
 		System.out.println("board_request.nn");
 		return "board.board_request";
 	}
-	
+	@RequestMapping("/index.nn")
+	public String index(){
+		System.out.println("index.nn");
+		return "index";
+	}
 	
 	@RequestMapping("/duplicationCheck")
 	public @ResponseBody String duplicationCheck(HttpServletRequest request) throws Exception {
 		
-		System.out.println("드루와드루와");
-		
-		MemberDao memberdao = sqlSession.getMapper(MemberDao.class);
-		
-		System.out.println("드루와드루와2");
-		
-		String em = request.getParameter("email");
-		
-		System.out.println(em);
-		
+	
+		System.out.println("this it duple check");
+		MemberDao memberdao = sqlSession.getMapper(MemberDao.class);	
+		String em = request.getParameter("email");	
 		int resultVO = memberdao.checkedEmail(em);
-		
-		System.out.println("resultVO:"+resultVO);
-		System.out.println("드루와드루와3");
 		String result;
+		System.out.println("result:"+resultVO);
 		if(resultVO>0)
 		{
-			result="false"; //아이디사용불가
+			result="false"; //아이디사용불가, fb시 가입된유저
 		}
 		else
 		{
-			result="true";	//아이디사용가능
+			result="true";	//아이디사용가능, fb시 회원가입 ㄱㄱ
 		}
 		System.out.println(result);
 		return result;
 	}
 	
+	@RequestMapping("/fblogin")
+	public @ResponseBody void fblogin(HttpServletRequest request) throws Exception {
+		
+
+		System.out.println("드루와드루와");
+		
+		MemberDao memberdao = sqlSession.getMapper(MemberDao.class);
+		
+		System.out.println("드루와드루와2");
+
+		String email = request.getParameter("email");
+		System.out.println("Re"+request.getParameter("email"));
+		System.out.println(email);
+		System.out.println("드루와드루와3");
+		
+		
+		memberdao.fblogin(email);
+		
+		
+		
+		System.out.println("드루와드루와4");
+	}	
 	
-	
-	
-	
-	
-	
+	@RequestMapping("/fbsignup.nn")
+	public @ResponseBody void fbsignup(HttpServletRequest request) throws Exception {
+		
+		System.out.println("this is signup");
+		System.out.println("드루와드루와");
+		
+		MemberDao memberdao = sqlSession.getMapper(MemberDao.class);
+		
+		System.out.println("드루와드루와2");
+
+		String email = request.getParameter("email");
+		System.out.println("Re"+request.getParameter("email"));
+		System.out.println(email);
+		System.out.println("드루와드루와3");
+		
+		
+		memberdao.fbsignup(email);
+		
+		
+		
+		System.out.println("드루와드루와4");
+	}	
+
 	
 }

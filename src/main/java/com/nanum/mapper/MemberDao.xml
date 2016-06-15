@@ -60,4 +60,23 @@ WHERE member_email=#{email}
 </select>
 
 
+<!-- 페이스북 로그인시 -->
+<update id="fblogin" parameterType="String">
+UPDATE member
+SET
+member_lastdate=sysdate
+WHERE member_email=#{email}
+</update>
+
+<!-- 권한 받고 가입시 
+insert into member(member_id, member_email, member_password, member_signdate, member_lastdate, member_level)
+VALUES (member_id_seq.nextval,'soom93@gmail.com', 'soomti', to_date(sysdate) ,'2016/06/08','1');
+
+-->
+<insert id="fbsignup" parameterType="String">
+insert into member(member_id, member_email, member_password, member_signdate, member_lastdate, member_level)
+VALUES (member_id_seq.nextval,#{email},'1231', sysdate ,sysdate,'1')
+</insert>
+
+
 </mapper>
