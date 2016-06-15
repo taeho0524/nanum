@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:security="http://www.springframework.org/schema/security"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans 
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/security 
+ http://www.springframework.org/schema/security/spring-security.xsd">
+
+<!-- 
+
+	@FileName : security-context.xml
+	@Project : NANUM
+	@Date : 2016. 6. 13.
+	@Author : god YJ
+
+-->
+
+
+	 <security:http >
+	  <security:csrf disabled="true" />
+	  <security:form-login login-page="/login.nn" authentication-failure-url="/login.nn?error"  />
+	  <security:logout logout-success-url="/index.nn" />				     
+	  <security:intercept-url pattern="/board_request.nn" access="hasRole('ROLE_일반회원')"/>  
+	</security:http>
+	<security:authentication-manager>
+		<security:authentication-provider>
+				  <security:jdbc-user-service data-source-ref="driverManagerDataSource"
+	   								          users-by-username-query="select member_email AS USERID, member_password AS PASSWORD, 1 enabled from member where member_email=?" 
+	      									  authorities-by-username-query="select m.member_email AS USERID, l.level_state AS ROLE_NAME
+	      									  								 from member m join member_level l on m.member_level = l.member_level
+	      									  								 where m.member_email=?" />
+		</security:authentication-provider>
+	</security:authentication-manager>
+</beans>
+
+
+
+
+
+
+

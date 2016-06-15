@@ -1,25 +1,21 @@
-/*  
-
-	@FileName : reset.css
-	@Project : NANUM
-	@Date : 2016. 6. 8.
-	@Author : √÷≈¬»£
-
-*/
-
-
-
 @CHARSET "UTF-8";
-
+/*
+ * @file: reset.css
+ * @date:2016/06/15
+ * @author: cutaeho
+ * @content:add board css
+ */
 @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
 		 
 *{border:0; padding:0; margin:0; font-family: 'Noto Sans KR', sans-serif;}
 label{margin-bottom:5px; font-weight:400; display:inline-block;}
 a{text-decoration:none; color:#000000;}
 
+body, html{width:100%; min-width: 1024px;}
 
 
 
 
-
+/*naver*/
+#naver_dic_audio_controller{display: none;}
 

@@ -1,8 +1,8 @@
 /**
- * @file:facebook.js
+ * @file: facebook.js
  * @date:2016/06/09
- * @author:수민
- * @content:자바스크립트 파일 
+ * @author:soomti
+ * @content:add js script 
  * @memo:다된다 controller에서 index.jsp로 보내주는것 포함하면 끝
  */
 
@@ -12,7 +12,7 @@
 	//웹페이지를 로드할때 로그인 상태인지 체크해준다.
 	window.fbAsyncInit = function() {
 	    FB.init({
-	      appId      : '861137850675010', //내 앱 아이디
+	      appId      : '251283701910163', //내 앱 아이디
 	      xfbml      : true,		
 	      version    : 'v2.5'
 	    });
@@ -46,7 +46,7 @@
 	//- userID: 앱을 사용하는 사용자의 ID
 	//상태 체크  처음왔을때 상태 체크
 	function statusChangeCallback(response) {
-		consolelog(response.status)// 로그인 상태를 나타내는 정보를 보여준다. 	   
+		console.log(response.status)// 로그인 상태를 나타내는 정보를 보여준다. 	   
     if (response.status === 'connected') {// 페이스북을 통해서 로그인이 되어있다.-->자동로그인
     	console.log('login ok');
     }
@@ -70,7 +70,8 @@
 		//var accessToken = response.authResponse.accessToken;  //액세스 토큰 받아온다 정상적으로 인증 받았을때 저장	
 		FB.login(function(response){  //response 객체를 처리 
 			
-			console.log(response.status);
+			console.log(response.status);  
+			console.log(response.authResponse.accessToken);
 			if (response.status === 'connected') {
 			    // 페이스북과 앱에 같이 로그인되어 있다.
 				FB.api('/me','GET', {fields: 'email'}, function(member) { 
@@ -82,22 +83,44 @@
 				    	  data: {"email":fb_email}, // ,"fbaccesstoken":accessToken}, 이거 어케해야딜지몰겠듀ㅠㅠ
 				    	  dataType: "json",
 				    	  success : function(result) {		
-									if(result == false){ //중복된 값 
+									if(result == false){ //중복된 값을 타면 로그인이 된다. 
+										
 										$.ajax({	
-									    	  type: "get",
+									    	  type: "post",
 									    	  url: "fblogin.nn",
 									    	  data: {"email":fb_email}, // ,"fbaccesstoken":accessToken}, 이거 어케해야딜지몰겠듀ㅠㅠ
-									    	  dataType: "json"
+									    	  success: function(result){//로그인성공
+									    		  	
+										    		   document.getElementById('username').value = fb_email;
+									                   document.getElementById('password').value = result;
+									                   document.getElementById('loginform').submit();
+										    		  
+									    	  },
+										      error:function(error){//로그인실패
+										    	  alert(error.statusText);
+										     }
 										});
+										
 							
 										
 									}else{ //회원가입 한다. 
+									
+										console.log(response.authResponse.accessToken);
 										$.ajax({	
 									    	  type: "get",
 									    	  url: "fbsignup.nn",
-									    	  data: {"email":fb_email}, // ,"fbaccesstoken":accessToken}, 이거 어케해야딜지몰겠듀ㅠㅠ
-									    	  dataType: "json"
+									    	  data: {"email":fb_email,
+									    		     "fbaccesstoken":response.authResponse.accessToken}, // ,"fbaccesstoken":accessToken}, 이거 어케해야딜지몰겠듀ㅠㅠ
+									    	  success: function(){
+									    		  alert('회원가입이 되셨습니다 로그인 페이지 가서 해주세요 ㅎㅎ');
+									    		  location.href="index.nn";
+									    	  },
+									    	  error:function(error){
+									    		  alert('error!');
+									    		  alert(error.statusText);
+									    	  }
 										});
+										
 									}
 								},
 								error : function(error) {

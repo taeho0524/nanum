@@ -22,7 +22,7 @@
 		Update
 		
 		@Date : 2016. 6 .10
-		@Author : 최용진
+		@Author : god YJ
 		@Contents : InternalResourceViewResolver 추가 및 Resolver 우선순위 설정
 	
 	-->
@@ -49,8 +49,17 @@
 		<beans:property name="suffix" value=".jsp" />
 	<beans:property name="order" value="2" />
 	</beans:bean>
+
+	<!--  
+		
+		@Date : 2016. 6 .15
+		@Author : shin d
+		@Contents :add json view
 	
-	
+	-->
+	<beans:bean id="jsonView" class="org.springframework.web.servlet.view.json.MappingJackson2JsonView">
+		<beans:property name="contentType" value="text/html;charset=UTF-8" />
+	</beans:bean>
 
 	
 	<context:component-scan base-package="com.nanum.controller" />

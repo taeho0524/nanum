@@ -3,7 +3,7 @@
 	@FileName : footer.jsp
 	@Project : NANUM
 	@Date : 2016. 6. 8.
-	@Author : 최태호
+	@Author : cutaehou
 
 -->
 

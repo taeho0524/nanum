@@ -7,10 +7,14 @@
 @FileName : Tiles.xml
 @Project : NANUM
 @Date : 2016. 6. 10.
-@Author : 최용진
+@Author : God YJ
 -->
-	
 	 <!-- return *.* -->
+	 <definition name="index.*" template="/WEB-INF/views/index/inc/layout.jsp">		
+		<put-attribute name="footer"  value="/WEB-INF/views/inc/footer.jsp" />		
+		<put-attribute name="content" value="/WEB-INF/views/index/{1}.jsp" />
+	</definition>
+	 
 	 <definition name="*.*" template="/WEB-INF/views/inc/layout.jsp">		
 		<put-attribute name="header"  value="/WEB-INF/views/inc/header.jsp" />		
 		<put-attribute name="footer"  value="/WEB-INF/views/inc/footer.jsp" />		

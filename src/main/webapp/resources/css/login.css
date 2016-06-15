@@ -1,23 +1,20 @@
-/*  
-
-	@FileName : login.css
-	@Project : NANUM
-	@Date : 2016. 6. 8.
-	@Author : ����ȣ
-
-*/
-
-
-
 @CHARSET "UTF-8";
 
+/*
+ * @file: login.css
+ * @date:2016/06/15
+ * @author: cutaeho
+ * @content:add board css
+ */
+
+
 /*=========================================================================================*/
-/*login page �⺻*/
+/*login page 기본*/
 html, body{width:100%; height:100%; overflow-y:hidden;}
 #wrap{background:url(../images/login-bg-s.jpg) repeat-x; background-size:cover; width:100%; padding:35px 0; height:100%; overflow-y:scroll;}
 #login-wrap{width: 1024px; margin: 0 auto; padding:0 15px;}
 		
-/*�ΰ�*/
+/*로고*/
 .login-logo{margin:0 auto; text-align:center;}
 .login-box a:after{content:""; display:block; clear:both;}
 .login-logo img{width:150px;}
@@ -25,20 +22,25 @@ html, body{width:100%; height:100%; overflow-y:hidden;}
 		
 /*=====================================login==========================================*/
 
-/*form �ڽ�*/
+/*form 박스*/
 .login-box{width:300px; margin: 30px auto 30px; background-color:#F7F6F5; border-radius:5px; padding:30px 25px;}
 .login-form{margin-bottom:20px; font-size:1em;}
 .form-controll{box-shadow: 0 1px 2px #ccc; border: 1px solid #ccc; transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s; width:100%; padding:6px 12px; max-width:100%; box-sizing:border-box;}
 .btn{border-radius:5px; width:100%; padding:6px 12px; font-size:14px; opacity:0.8; box-sizing:border-box; text-align:center;}
 		
-/*�α��� btn*/
+/*로그인 btn*/
+
+				/*공통 나중에 정리하기 2016-06-08 - 21:13  최태호*/
 .btn-primary{color:#FFFFFF; line-height:1.2; background:#FF4B4E; cursor:pointer;}
 .btn-facebook{color:#FFFFFF;line-height:1.2; background-color:#3A5795; cursor:pointer; display:block;}
 .btn:hover{opacity:1;}
 .margin-15{margin-top:15px;}
+
+				/*공통 나중에 정리하기 2016-06-08 - 21:13  최태호*/
+
 		
 		
-/*���̵� ��й�ȣ ã��*/
+/*아이디 비밀번호 찾기*/
 .row-login{margin-top:30px;}
 .row-login:after{clear:both; content:""; display:block;}
 .row-login a{color:#FF363A; font-size:14px;}
@@ -71,7 +73,7 @@ html, body{width:100%; height:100%; overflow-y:hidden;}
 /*=====================================forgot_account=============================================*/
 .margin-b15{margin-bottom:10px;}
 
-
+.pwd_ok, .email-msg, .emailCheck, .passwordCheck{color:red;}
 
 
 

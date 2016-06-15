@@ -1,28 +1,27 @@
 <!-- 
-
 	@FileName : header.jsp
 	@Project : NANUM
 	@Date : 2016. 6. 8.
-	@Author : 최태호
+	@Author :  cutaehou
 
 -->
 
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<!-- reset -->
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/reset.css">
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/login.css">
-
+	<!-- reset -->
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/login.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/common.js"></script>
 <title>Insert title here</title>
 </head>
 <header>
 	<div class="head-top">
     	<div class="head-logo">
-        	<a href="#">
+        	<a href="index.nn">
         		<img src="${pageContext.request.contextPath}/resources/images/header-logo.png" alt="head-logo">
             </a>
         </div>
@@ -39,8 +38,8 @@
             </form>
         </div>
         <div class="head-right">
-        	<div><a href="#">로그인</a></div>
-            <div><a href="#">무료 회원가입</a></div>
+        	<div><a href="login.nn">로그인</a></div>
+            <div><a href="signup.nn">무료 회원가입</a></div>
             <div><a href="#">여긴 뭐 뿌릴지 생각중...</a></div>
         </div>
     </div>
